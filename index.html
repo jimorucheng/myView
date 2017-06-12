@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#myCanvas{
+			border: 1px solid bisque;
+			background-color: aqua;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById('myCanvas');
+			var context=canvas.getContext('2d');
+		    context.fillStyle='red';
+		    context.fillRect(50,50,200,50);
+		    
+		    context.rect(50,120,200,50);
+		    context.fillStyle='blue';
+		    context.fill();
+		    
+		    context.beginPath();
+		    context.rect(350,120,200,50);
+		    context.strokeStyle='green';
+		    context.lineWidth=4;
+		    context.shadowColor='black';
+		    context.shadowBlur='20';
+		    context.shadowOffsetX='10';
+		    context.shadowOffsetY='10';
+		    context.globalAlpha='0.5';
+		    context.stroke();
+		    
+		   context.beginPath();
+		   context.arc(450,55,50,0,2*Math.PI);
+		    context.strokeStyle='yellow';
+		    context.lineWidth=4;
+		    context.shadowColor='red';
+		    context.shadowBlur='5';
+		    context.shadowOffsetX='8';
+		    context.shadowOffsetY='2';
+		    context.globalAlpha='1';
+		    context.stroke();
+		   
+		    
+            
+		}
+	</script>
+	<body>
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+	</body>
+</html>
